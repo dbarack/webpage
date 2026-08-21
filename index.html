@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>David L Barack — Philosopher and Neuroscientist</title>
+
+<!-- =========================================================================
+     Search this file for [CHECK] before publishing. Nine of them.
+     Everything else is finished.
+     ========================================================================= -->
+
+<meta name="description" content="David L Barack is a philosopher and neuroscientist at Carnegie Mellon University. He works on the conceptual foundations of cognitive neuroscience and artificial intelligence, the role of search in inquiry, and the neural circuits behind foraging decisions.">
+<link rel="canonical" href="https://dbarack.com/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="David L Barack — Philosopher and Neuroscientist">
+<meta property="og:description" content="The neural circuits of foraging decisions, and the conceptual foundations of cognitive neuroscience.">
+<meta property="og:url" content="https://dbarack.com/">
+<meta property="og:image" content="https://dbarack.com/portrait.jpg"><!-- [CHECK] -->
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"Person","name":"David L Barack",
+  "url":"https://dbarack.com/","jobTitle":"Postdoctoral Research Fellow",
+  "affiliation":[
+    {"@type":"Organization","name":"Carnegie Mellon University"},
+    {"@type":"Organization","name":"Center for Philosophy of Science, University of Pittsburgh"}],
+  "alumniOf":{"@type":"Organization","name":"Duke University"},
+  "sameAs":["https://scholar.google.com/citations?user=C7BbSSgAAAAJ",
+            "https://philpeople.org/profiles/david-barack"],
+  "knowsAbout":["Philosophy of neuroscience","Foraging","Decision making","Dynamical systems","Epistemology of inquiry"]
+}
+</script>
+
+<style>
+/* ═══ tokens ══════════════════════════════════════════════════════════════
+   The palette is a two-channel fluorescence merge. Magenta and green are the
+   colourblind-safe pair used for merged channels in microscopy. On the light
+   ground the channels multiply toward black; on the dark ground they screen
+   toward white — which is what the same two channels actually do on a
+   microscope. Same image, both polarities.
+   ═══════════════════════════════════════════════════════════════════════ */
+:root{
+  --paper:#E8EBE5;
+  --raised:#F2F4EE;
+  --ink:#12160F;
+  --soft:#4F5750;
+  --faint:#7B8479;
+  --rule:#C6CDC0;
+  --phil:#A3186A;
+  --neuro:#0B7048;
+  --blend:multiply;
+  --shade:rgba(18,22,15,.05);
+
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"Newsreader",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+
+  --gut:clamp(1.25rem,5vw,5rem);
+  --measure:33rem;
+}
+[data-theme="dark"],
+:root:not([data-theme="light"]) [data-auto-dark]{}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0B0E0A; --raised:#141810; --ink:#E9ECE4; --soft:#A2AA9C;
+    --faint:#79826F; --rule:#2C332A;
+    --phil:#FF3D9A; --neuro:#28E39B; --blend:screen;
+    --shade:rgba(233,236,228,.05);
+  }
+}
+[data-theme="dark"]{
+  --paper:#0B0E0A; --raised:#141810; --ink:#E9ECE4; --soft:#A2AA9C;
+  --faint:#79826F; --rule:#2C332A;
+  --phil:#FF3D9A; --neuro:#28E39B; --blend:screen;
+  --shade:rgba(233,236,228,.05);
+}
+[data-theme="light"]{
+  --paper:#E8EBE5; --raised:#F2F4EE; --ink:#12160F; --soft:#4F5750;
+  --faint:#7B8479; --rule:#C6CDC0; --phil:#A3186A; --neuro:#0B7048;
+  --blend:multiply; --shade:rgba(18,22,15,.05);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);
+  font-size:clamp(1.03rem,1rem + .22vw,1.16rem);line-height:1.6;font-weight:400;
+  transition:background .35s ease,color .35s ease;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:underline;text-underline-offset:.19em;
+  text-decoration-thickness:1px;text-decoration-color:var(--rule);
+  transition:text-decoration-color .18s,color .18s}
+a:hover{text-decoration-color:currentColor}
+:focus-visible{outline:2px solid var(--phil);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-9999px}
+.skip:focus{position:fixed;left:var(--gut);top:.7rem;z-index:99;background:var(--ink);
+  color:var(--paper);padding:.5rem .9rem;font-family:var(--mono);font-size:.78rem;text-decoration:none}
+.wrap{max-width:72rem;margin:0 auto;padding:0 var(--gut)}
+
+/* ═══ signature: the merge ═══ */
+.masthead{padding:clamp(3.5rem,11vw,8rem) 0 clamp(2.5rem,6vw,4rem)}
+.merge{
+  position:relative;display:inline-block;margin:0;isolation:isolate;
+  font-family:var(--display);font-weight:800;
+  font-size:clamp(2.9rem,11.5vw,8.4rem);
+  line-height:.9;letter-spacing:-.042em;
+}
+.merge .ch{display:block;mix-blend-mode:var(--blend)}
+.merge .ch--n{position:absolute;inset:0}
+.merge .ch--p{color:var(--phil);transform:translate(-2px,-1.5px)}
+.merge .ch--n{color:var(--neuro);transform:translate(2px,1.5px)}
+@media (prefers-reduced-motion:no-preference){
+  .merge .ch--p{animation:regP 1.05s cubic-bezier(.16,.8,.24,1) both}
+  .merge .ch--n{animation:regN 1.05s cubic-bezier(.16,.8,.24,1) both}
+}
+@keyframes regP{from{transform:translate(-18px,-9px);opacity:0}to{transform:translate(-2px,-1.5px);opacity:1}}
+@keyframes regN{from{transform:translate(18px,9px);opacity:0}to{transform:translate(2px,1.5px);opacity:1}}
+
+.standfirst{font-size:clamp(1.18rem,1rem + 1vw,1.72rem);font-weight:200;line-height:1.36;
+  max-width:37rem;margin:1.9rem 0 0;letter-spacing:-.008em}
+.standfirst strong{font-weight:400}
+.standfirst .lv{font-style:italic;font-weight:300}
+
+.posts{margin:2rem 0 0;padding:0;list-style:none;font-family:var(--mono);
+  font-size:.775rem;line-height:1.8;letter-spacing:.005em;color:var(--soft);max-width:44rem}
+.posts li{padding-left:1.15rem;position:relative}
+.posts li::before{content:"";position:absolute;left:0;top:.75em;width:5px;height:5px;
+  border-radius:50%;background:var(--faint)}
+
+.quicklinks{display:flex;flex-wrap:wrap;gap:.5rem;margin:2.3rem 0 0;padding:0;list-style:none}
+.quicklinks a{display:inline-block;font-family:var(--mono);font-size:.735rem;letter-spacing:.05em;
+  text-transform:uppercase;padding:.52rem .9rem;border:1px solid var(--rule);border-radius:999px;
+  text-decoration:none;transition:border-color .2s,color .2s,background .2s}
+.quicklinks a:hover{border-color:var(--ink)}
+.quicklinks a.primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.quicklinks a.primary:hover{background:var(--phil);border-color:var(--phil);color:#fff}
+
+/* ═══ nav ═══ */
+.bar{position:sticky;top:0;z-index:30;background:var(--paper);border-bottom:1px solid var(--rule)}
+.bar .wrap{display:flex;align-items:center;gap:1rem}
+.bar nav{display:flex;gap:1.5rem;overflow-x:auto;padding:.75rem 0;flex:1;
+  font-family:var(--mono);font-size:.725rem;letter-spacing:.09em;text-transform:uppercase;
+  scrollbar-width:none}
+.bar nav::-webkit-scrollbar{display:none}
+.bar a{white-space:nowrap;text-decoration:none;color:var(--soft)}
+.bar a:hover{color:var(--ink)}
+.flip{flex:none;display:flex;align-items:center;gap:.4rem;background:none;border:0;
+  cursor:pointer;padding:.45rem .1rem;font-family:var(--mono);font-size:.68rem;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--faint)}
+.flip:hover{color:var(--ink)}
+.flip .dot{width:9px;height:9px;border-radius:50%;mix-blend-mode:var(--blend);display:block}
+.flip .dot--p{background:var(--phil);margin-right:-5px}
+.flip .dot--n{background:var(--neuro)}
+.flip .lbl{display:none}
+@media (min-width:34rem){.flip .lbl{display:inline}}
+
+/* ═══ sections ═══ */
+section{padding:clamp(3.4rem,7.5vw,6rem) 0}
+.rule{border:0;border-top:1px solid var(--rule);margin:0}
+.eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--faint);margin:0 0 1.5rem}
+h2{font-family:var(--display);font-weight:600;letter-spacing:-.025em;
+  font-size:clamp(1.55rem,1.15rem + 1.5vw,2.35rem);line-height:1.08;margin:0 0 1.3rem;max-width:22ch}
+h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;font-size:1.05rem;
+  line-height:1.28;margin:0 0 .45rem}
+p{margin:0 0 1.05em;max-width:var(--measure)}
+p:last-child{margin-bottom:0}
+
+/* about + portrait */
+.about{display:grid;gap:clamp(1.8rem,4vw,3.5rem);grid-template-columns:1fr;align-items:start}
+@media (min-width:52rem){.about{grid-template-columns:1fr minmax(13rem,17rem)}}
+.portrait{margin:0}
+.portrait img{display:block;width:100%;height:auto;filter:grayscale(1) contrast(1.05)}
+.portrait figcaption{font-family:var(--mono);font-size:.68rem;color:var(--faint);
+  margin-top:.6rem;letter-spacing:.04em;line-height:1.5}
+.portrait[hidden]{display:none}
+
+/* channels */
+.channels{display:grid;gap:clamp(1.6rem,3.5vw,3rem);grid-template-columns:1fr}
+@media (min-width:47rem){.channels{grid-template-columns:1fr 1fr}}
+.channel{border-top:2px solid var(--ink);padding-top:1.15rem}
+.channel--p{border-color:var(--phil)}
+.channel--n{border-color:var(--neuro)}
+.channel h3{font-size:clamp(1.22rem,1rem + .75vw,1.55rem);margin-bottom:.85rem}
+.channel--p h3{color:var(--phil)}
+.channel--n h3{color:var(--neuro)}
+.channel p{font-size:.98rem;max-width:31rem;color:var(--soft)}
+.channel strong{color:var(--ink);font-weight:500}
+
+/* selected */
+.selected{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.selected li{border-bottom:1px solid var(--rule);padding:1.4rem 0}
+.selected .gloss{font-size:.95rem;color:var(--soft);margin:.5rem 0 0;max-width:42rem}
+@media (min-width:52rem){
+  .selected li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);
+    gap:0 2.5rem;align-items:baseline}
+  .selected .gloss{margin-top:0}
+}
+
+/* talks */
+.talks{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.talks li{border-bottom:1px solid var(--rule);padding:1.05rem 0;
+  display:grid;grid-template-columns:1fr;gap:.25rem}
+@media (min-width:47rem){
+  .talks li{grid-template-columns:7.5rem 1fr auto;gap:0 1.5rem;align-items:baseline}
+}
+.talks .when{font-family:var(--mono);font-size:.75rem;color:var(--faint);white-space:nowrap}
+.talks .what{font-weight:500}
+.talks .where{font-size:.9rem;color:var(--soft)}
+@media (min-width:47rem){.talks .where{text-align:right}}
+
+/* publications */
+.filters{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;margin:0 0 2.1rem}
+.filters .label{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--faint);margin-right:.55rem}
+.filters button{font-family:var(--mono);font-size:.74rem;padding:.44rem .85rem;
+  border:1px solid var(--rule);background:transparent;color:var(--soft);
+  border-radius:999px;cursor:pointer;transition:all .2s}
+.filters button:hover{border-color:var(--soft);color:var(--ink)}
+.filters button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.filters button[data-ch="p"][aria-pressed="true"]{background:var(--phil);border-color:var(--phil);color:#fff}
+.filters button[data-ch="n"][aria-pressed="true"]{background:var(--neuro);border-color:var(--neuro);color:#fff}
+[data-theme="dark"] .filters button[aria-pressed="true"],
+[data-theme="dark"] .filters button[data-ch="p"][aria-pressed="true"],
+[data-theme="dark"] .filters button[data-ch="n"][aria-pressed="true"]{color:#0B0E0A}
+
+.pubgroup{margin:0 0 2.8rem}
+.pubgroup:last-child{margin-bottom:0}
+.pubgroup > h3{font-family:var(--mono);font-weight:500;font-size:.7rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--faint);padding-bottom:.65rem;
+  border-bottom:1px solid var(--rule);margin-bottom:.35rem}
+.pubs{list-style:none;margin:0;padding:0}
+.pub{display:grid;grid-template-columns:3.9rem 1fr;gap:0 1.1rem;padding:1.05rem 0;
+  border-bottom:1px solid var(--rule);align-items:start}
+.pub:last-child{border-bottom:0}
+.pub .yr{font-family:var(--mono);font-size:.77rem;color:var(--faint);padding-top:.32em}
+.pub .bd{min-width:0}
+.pub .ttl{font-weight:500;font-size:1.03rem;line-height:1.34;display:block}
+.pub .aut,.pub .ven{display:block;font-size:.9rem;color:var(--soft);line-height:1.45}
+.pub .aut{margin-top:.16rem}
+.pub .ven i{font-style:italic}
+.tags{margin-top:.45rem;display:flex;gap:.35rem;flex-wrap:wrap}
+.tag{font-family:var(--mono);font-size:.62rem;letter-spacing:.11em;text-transform:uppercase;
+  padding:.15rem .45rem;border:1px solid currentColor;border-radius:3px;line-height:1.55}
+.tag--p{color:var(--phil)}
+.tag--n{color:var(--neuro)}
+.tag--s{color:var(--faint)}
+.pub[hidden],.pubgroup[hidden]{display:none}
+
+footer{padding:3rem 0 4.5rem;font-family:var(--mono);font-size:.73rem;color:var(--faint);
+  border-top:1px solid var(--rule)}
+.colophon{display:flex;flex-wrap:wrap;gap:.5rem 1.8rem;justify-content:space-between}
+
+/* ═══ print ═══ */
+@media print{
+  :root{--paper:#fff;--ink:#000;--soft:#333;--faint:#666;--rule:#bbb;
+        --phil:#000;--neuro:#000;--blend:normal}
+  body{font-size:10.5pt;line-height:1.4}
+  .bar,.filters,.quicklinks,.portrait,.skip{display:none}
+  .merge .ch--n{display:none}
+  .merge .ch--p{color:#000;transform:none;animation:none}
+  .merge{font-size:26pt}
+  section{padding:.8rem 0;break-inside:auto}
+  .pub{break-inside:avoid;padding:.35rem 0}
+  a{text-decoration:none}
+  .pub .ttl a::after{content:" [" attr(href) "]";font-size:7.5pt;color:#666;word-break:break-all}
+}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap">
+    <h1 class="merge" aria-label="David L Barack">
+      <span class="ch ch--p" aria-hidden="true">David&nbsp;L&nbsp;Barack</span>
+      <span class="ch ch--n" aria-hidden="true">David&nbsp;L&nbsp;Barack</span>
+    </h1>
+
+    <p class="standfirst">
+      I study how an animal decides when to <span class="lv">leave</span> — a patch, a
+      task, a line of inquiry — and what that decision reveals about the mind.
+      <strong>Half the work is recording from neurons. Half of it is philosophy.</strong>
+    </p>
+
+    <ul class="posts">
+      <li>Postdoctoral Research Fellow — Social &amp; Decision Sciences and Philosophy, Carnegie Mellon University</li>
+      <li>Resident Fellow — Center for Philosophy of Science, University of Pittsburgh</li>
+      <li>Co-founder — Society for Philosophy and Neuroscience</li>
+    </ul>
+
+    <ul class="quicklinks">
+      <li><a class="primary" href="david-barack-cv.pdf">Curriculum vitae (PDF)</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="mailto:you@andrew.cmu.edu">Email</a></li><!-- [CHECK] -->
+      <li><a href="https://scholar.google.com/citations?user=C7BbSSgAAAAJ">Google Scholar</a></li>
+      <li><a href="https://philpeople.org/profiles/david-barack">PhilPeople</a></li>
+      <!-- [CHECK] ORCID? Bluesky? GitHub? Add or delete. -->
+    </ul>
+  </div>
+</header>
+
+<div class="bar">
+  <div class="wrap">
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#selected">Selected work</a>
+      <a href="#talks">Talks</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="flip" type="button" id="flip" aria-label="Invert the channels">
+      <span class="dot dot--p" aria-hidden="true"></span><span class="dot dot--n" aria-hidden="true"></span>
+      <span class="lbl">Invert</span>
+    </button>
+  </div>
+</div>
+
+<main id="main">
+
+<section id="about">
+  <div class="wrap">
+    <p class="eyebrow">About</p>
+    <div class="about">
+      <div>
+        <h2>Two disciplines, one question, asked from both ends.</h2>
+        <p>
+          As a philosopher, I work on the theoretical and conceptual foundations of
+          cognitive neuroscience and artificial intelligence, on the basis of cognition
+          in neurodynamical systems, and on the role of search in inquiry — including
+          logical and mathematical reasoning.
+        </p>
+        <p>
+          As a neuroscientist, I investigate the neural circuits and computations that
+          govern foraging decisions for different kinds of resource, how foragers use
+          information to learn about their environments, and how the decision to exploit
+          a known resource or explore for a new one gets made.
+        </p>
+        <p>
+          I hold a Ph.D. in philosophy from Duke, with a graduate certificate in cognitive
+          neuroscience. Before Carnegie Mellon I was a postdoctoral fellow at the University
+          of Pennsylvania and a Presidential Scholar in Society and Neuroscience at Columbia,
+          where I worked with Daniel Salzman; my graduate and early postdoctoral training in
+          primate neurophysiology was with Michael Platt.
+          <!-- [CHECK] add a live sentence: the book in progress, courses, anything in press -->
+        </p>
+      </div>
+      <figure class="portrait" id="portrait">
+        <!-- [CHECK] save a photo as portrait.jpg beside this file.
+             If the file is absent the figure removes itself, so this is safe to leave. -->
+        <img src="portrait.jpg" alt="David L Barack" width="600" height="750"
+             onerror="document.getElementById('portrait').hidden=true">
+        <figcaption>Pittsburgh, 2026</figcaption><!-- [CHECK] -->
+      </figure>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="research">
+  <div class="wrap">
+    <p class="eyebrow">Two channels</p>
+    <div class="channels">
+      <div class="channel channel--p">
+        <h3>Philosophy</h3>
+        <p>
+          Cognitive systems are <strong>componential dynamical systems</strong>. Their
+          parts — brain regions, and the subsystems within them — each instantiate
+          dynamical systems that perform functions, described by individual variables and
+          local parameters. That is a rival to systemic dynamicism, which demands collective
+          variables and global control parameters spanning brain, body, and environment.
+        </p>
+        <p>
+          A second line concerns <strong>search in inquiry</strong>: what makes a search
+          for information rational, when it is reasonable to abandon a question, and how
+          the structure of foraging carries over into logical and mathematical reasoning.
+        </p>
+        <p>
+          A third puts the same questions to artificial systems — what
+          <strong>NeuroAI</strong> genuinely promises, and where the analogy between
+          brains and models is asked to carry more weight than it can bear.
+        </p>
+      </div>
+      <div class="channel channel--n">
+        <h3>Neuroscience</h3>
+        <p>
+          <strong>Foraging</strong> is the experimental workhorse. Recording from posterior
+          cingulate cortex in macaques, I have shown that single neurons signal the decision
+          to disengage from a patch, and that they carry information about the environment
+          which predicts how variable behaviour will be.
+        </p>
+        <p>
+          Not only food. Foragers search for different kinds of resource —
+          <strong>information</strong> above all — and I study how what they find gets
+          used to learn about an environment, and how the choice to exploit a known
+          patch or explore for a new one is reached.
+        </p>
+        <p>
+          In humans, individual differences in the tendency to explore track attention
+          deficits — a link between a <strong>foraging phenotype</strong> and clinical
+          variation that I am continuing to pursue.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="selected">
+  <div class="wrap">
+    <p class="eyebrow">Selected work</p>
+    <h2>Five papers, if you only read five</h2>
+    <!-- [CHECK] my picks and my glosses. Swap freely — this is the section a
+         search committee reads first, so it should be your choice, not mine. -->
+    <ul class="selected">
+      <li>
+        <div>
+          <h3><a href="https://royalsocietypublishing.org/doi/10.1098/rspb.2022.2584">Attention Deficits Linked with Proclivity to Explore while Foraging</a></h3>
+          <span class="tags"><span class="tag tag--n">Neuro</span><span class="tag tag--s">Proc R Soc B · 2024</span></span>
+        </div>
+        <p class="gloss">People who explore more in a foraging task report more attention deficits — evidence that a clinical phenotype has a foraging signature.</p>
+      </li>
+      <li>
+        <div>
+          <h3><a href="https://link.springer.com/article/10.1007/s10539-019-9719-6">Mental Machines</a></h3>
+          <span class="tags"><span class="tag tag--p">Phil</span><span class="tag tag--s">Biology &amp; Philosophy · 2019</span></span>
+        </div>
+        <p class="gloss">The case for componential dynamicism, and against the systemic dynamicism that requires brain–body–environment coupling.</p>
+      </li>
+      <li>
+        <div>
+          <h3><a href="https://www.sciencedirect.com/science/article/pii/S0896627317309170">Posterior cingulate neurons dynamically signal decisions to disengage during foraging</a></h3>
+          <span class="tags"><span class="tag tag--n">Neuro</span><span class="tag tag--s">Neuron · 2017</span></span>
+        </div>
+        <p class="gloss">Single-neuron evidence that posterior cingulate cortex tracks the moment an animal decides to leave.</p>
+      </li>
+      <li>
+        <div>
+          <h3><a href="https://www.nature.com/articles/s41583-021-00448-6">Two Views on the Cognitive Brain</a></h3>
+          <span class="tags"><span class="tag tag--p">Phil</span><span class="tag tag--n">Neuro</span><span class="tag tag--s">Nat Rev Neurosci · 2021</span></span>
+        </div>
+        <p class="gloss">With John Krakauer: what a cognitive account of the brain buys you that a sensorimotor one does not.</p>
+      </li>
+      <li>
+        <div>
+          <h3><a href="https://link.springer.com/article/10.1007/s10539-024-09939-z">What is Foraging?</a></h3>
+          <span class="tags"><span class="tag tag--p">Phil</span><span class="tag tag--s">Biology &amp; Philosophy · 2024</span></span>
+        </div>
+        <p class="gloss">An analysis of the concept doing quiet work across ecology, economics, psychiatry, and my own lab.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="talks">
+  <div class="wrap">
+    <p class="eyebrow">Talks</p>
+    <h2>Recent and upcoming</h2>
+    <!-- [CHECK] I've seeded the two Finland talks. Verify the titles, then keep
+         adding — this list is the cheapest way to look active. -->
+    <ul class="talks" id="talklist"></ul>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="publications">
+  <div class="wrap">
+    <p class="eyebrow">Publications</p>
+    <h2>Everything, in order</h2>
+    <div class="filters">
+      <span class="label">Filter</span>
+      <button type="button" data-ch="all" aria-pressed="true">All</button>
+      <button type="button" data-ch="p" aria-pressed="false">Philosophy</button>
+      <button type="button" data-ch="n" aria-pressed="false">Neuroscience</button>
+    </div>
+    <div id="publist" aria-live="polite"></div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="contact">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h2>Get in touch</h2>
+    <p>
+      Email is best: <a href="mailto:you@andrew.cmu.edu">you@andrew.cmu.edu</a>.<!-- [CHECK] -->
+      I am glad to hear from students, prospective collaborators, and journalists.
+    </p>
+    <p>
+      Department of Social and Decision Sciences, Carnegie Mellon University, Pittsburgh, PA.
+      <!-- [CHECK] office / mailing address, or delete this line -->
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap colophon">
+    <span>David L Barack, Ph.D.</span>
+    <span>Updated August 2026</span>
+  </div>
+</footer>
+
+<script>
+/* ═══ theme flip ═══ */
+(function(){
+  const root = document.documentElement;
+  const stored = localStorage.getItem("polarity");
+  if (stored) root.setAttribute("data-theme", stored);
+  document.getElementById("flip").addEventListener("click", () => {
+    const dark = getComputedStyle(root).getPropertyValue("--blend").trim() === "screen";
+    const next = dark ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("polarity", next); } catch(e){}
+  });
+})();
+
+/* ═══ talks ═══════════════════════════════════════════════════════════════
+   Newest first. Delete old ones when the list gets long, or keep them —
+   a long talks list reads as a career.
+   ═══════════════════════════════════════════════════════════════════════ */
+const TALKS = [
+  {d:"27 Aug 2026", t:"Symposium 4", w:"ICMCC, Helsinki"},                                  // [CHECK] title
+  {d:"20 Aug 2026", t:"Zetetic agency", w:"Agential Capacities in Context, Turku"}          // [CHECK] title
+];
+
+/* ═══ publications ════════════════════════════════════════════════════════
+   ch: "p" philosophy, "n" neuroscience, or both. Drives tags and the filter.
+   The Krakauer paper is listed once with both tags, not twice.
+   To add: copy a line, change the fields.
+   ═══════════════════════════════════════════════════════════════════════ */
+const PUBS = [
+  {g:"Journal articles", y:"2026", ch:["p"], st:"Reviewed",
+   a:"Pohl S, Walker EY, Barack DL, Lee J, Denison RN, Block N, Meyniel F, Ma WJ",
+   t:"Desiderata of evidence for representation in neuroscience",
+   v:"Nature Reviews Neuroscience", d:"27, 357–372",
+   u:"https://www.nature.com/articles/s41583-026-01030-8"},
+  {g:"Journal articles", y:"2025", ch:["p"], st:"Reviewed", a:"Barack DL",
+   t:"The Multiple Action Account of Filling a Role",
+   v:"Philosophical Studies", d:"182(8), 2297–2312"},
+  {g:"Journal articles", y:"2025", ch:["p"], st:"Reviewed", a:"Barack DL",
+   t:"Theory change in cognitive neurobiology: the case of the orbitofrontal cortex",
+   v:"WIREs Cognitive Science", d:"16:e70003, 1–12"},
+  {g:"Journal articles", y:"2025", ch:["p"], st:"Reviewed", a:"Barack DL",
+   t:"Context and Neural Function", v:"Philosophy of Science", d:"92, 185–203"},
+  {g:"Journal articles", y:"2025", ch:["p"], st:"Reviewed", a:"Barack DL",
+   t:"Rational Dynamics in Efficient Inquiry", v:"Analysis", d:"85(3), 649–658"},
+  {g:"Journal articles", y:"2024", ch:["p"], st:"Reviewed", a:"Barack DL",
+   t:"What is Foraging?", v:"Biology and Philosophy", d:"39",
+   u:"https://link.springer.com/article/10.1007/s10539-024-09939-z"},
+  {g:"Journal articles", y:"2024", ch:["n"], st:"Reviewed",
+   a:"Barack DL, Ludwig VU, Parodi F, Ahmed N, Brannon EM, Ramakrishnan A, Platt ML",
+   t:"Attention Deficits Linked with Proclivity to Explore while Foraging",
+   v:"Proceedings of the Royal Society B", d:"291(2017), 1–13",
+   u:"https://royalsocietypublishing.org/doi/10.1098/rspb.2022.2584"},
+  {g:"Journal articles", y:"2023", ch:["p"], st:"Reviewed", a:"Barack DL",
+   t:"The Dynamicist Landscape", v:"Topics in Cognitive Science",
+   u:"https://onlinelibrary.wiley.com/doi/10.1111/tops.12699"},
+  {g:"Journal articles", y:"2023", ch:["n"], st:"Reviewed",
+   a:"Walker EY, Pohl S, Denison RN, Barack DL, Lee J, Block N, Ma WJ, Meyniel F",
+   t:"Studying the Neural Representations of Uncertainty", v:"Nature Neuroscience",
+   u:"https://doi.org/10.1038/s41593-023-01444-y"},
+  {g:"Journal articles", y:"2023", ch:["n"], st:"Reviewed",
+   a:"Kay K, Bonnen K, Denison RN, Arcaro MJ, Barack DL",
+   t:"Tasks and their role in visual neuroscience", v:"Neuron",
+   u:"https://www.cell.com/neuron/fulltext/S0896-6273(23)00218-0"},
+  {g:"Journal articles", y:"2023", ch:["n"], st:"Reviewed",
+   a:"Barack DL, Bakkour A, Shohamy D, Salzman CD",
+   t:"Signatures of visuospatial information foraging during learning of complex environments",
+   v:"Scientific Reports", u:"https://www.nature.com/articles/s41598-023-27662-9"},
+  {g:"Journal articles", y:"2022", ch:["n"], st:"Reviewed",
+   a:"Barack DL, Miller EK, Moore CI, Packer AM, Pessoa L, Ross LN, Rust NC",
+   t:"A call for more clarity around causality in neuroscience", v:"Trends in Neurosciences",
+   u:"https://www.cell.com/trends/neurosciences/fulltext/S0166-2236(22)00121-7"},
+  {g:"Journal articles", y:"2022", ch:["n"], st:"Invited",
+   a:"Wise TB, Barack DL, Templer VL",
+   t:"Geometrical representation of serial order in working memory", v:"Learning and Behavior",
+   u:"https://doi.org/10.3758/s13420-022-00541-5"},
+  {g:"Journal articles", y:"2021", ch:["p","n"], st:"Reviewed",
+   a:"Barack DL, Krakauer J", t:"Two Views on the Cognitive Brain",
+   v:"Nature Reviews Neuroscience", u:"https://www.nature.com/articles/s41583-021-00448-6"},
+  {g:"Journal articles", y:"2021", ch:["p"], st:"Reviewed", a:"Barack DL",
+   t:"Mental Kinematics", v:"Synthese", d:"199, 1091–1123",
+   u:"https://link.springer.com/article/10.1007/s11229-020-02766-1"},
+  {g:"Journal articles", y:"2021", ch:["n"], st:"Reviewed", a:"Barack DL, Platt ML",
+   t:"Neuronal activity in the posterior cingulate cortex signals environmental information and predicts behavioral variability during routine foraging",
+   v:"Journal of Neuroscience", d:"41(12), 2703–2712",
+   u:"https://www.jneurosci.org/content/41/12/2703"},
+  {g:"Journal articles", y:"2019", ch:["p"], st:"Reviewed", a:"Barack DL, Jaegle A",
+   t:"Codes, Functions, and Causes", v:"Behavioral and Brain Sciences",
+   u:"https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/abs/codes-functions-and-causes-a-critique-of-brettes-conceptual-analysis-of-coding/917AFE6FA4850F278AE8D93E28B6BB92"},
+  {g:"Journal articles", y:"2019", ch:["p"], st:"Reviewed", a:"Barack DL",
+   t:"Mental Machines", v:"Biology and Philosophy", d:"34(63)",
+   u:"https://link.springer.com/article/10.1007/s10539-019-9719-6"},
+  {g:"Journal articles", y:"2019", ch:["p"], st:"Reviewed", a:"Barack DL",
+   t:"Cognitive Recycling", v:"British Journal for the Philosophy of Science", d:"70(1), 239–268",
+   u:"https://www.journals.uchicago.edu/doi/10.1093/bjps/axx024"},
+  {g:"Journal articles", y:"2017", ch:["n"], st:"Reviewed", a:"Barack DL, Chang SWC, Platt ML",
+   t:"Posterior cingulate neurons dynamically signal decisions to disengage during foraging",
+   v:"Neuron", d:"96(2), 339–347",
+   u:"https://www.sciencedirect.com/science/article/pii/S0896627317309170"},
+  {g:"Journal articles", y:"2017", ch:["n"], st:"Reviewed",
+   a:"Addicott MA, Pearson JM, Sweitzer MM, Barack DL, Platt ML",
+   t:"A primer on foraging and the explore/exploit trade-off for psychiatry research",
+   v:"Neuropsychopharmacology", d:"42, 1931–1939",
+   u:"https://www.nature.com/articles/npp2017108"},
+  {g:"Journal articles", y:"2016", ch:["n"], st:"Reviewed", a:"Barack DL, Platt ML",
+   t:"Neurocomputational Nosology: Malfunctions of Models and Mechanisms",
+   v:"Frontiers in Psychology", d:"7(602), 1–9",
+   u:"https://www.frontiersin.org/articles/10.3389/fpsyg.2016.00602/full"},
+  {g:"Journal articles", y:"2016", ch:["n"], st:"Reviewed", a:"Barack DL, Gold JI",
+   t:"Temporal Trade-offs in Psychophysics", v:"Current Opinion in Neurobiology", d:"37, 121–125",
+   u:"https://www.sciencedirect.com/science/article/pii/S0959438816300010"},
+  {g:"Journal articles", y:"2012", ch:["n"], st:"Reviewed", a:"Chang SWC, Barack DL, Platt ML",
+   t:"Mechanistic Classification of Neural Circuit Dysfunctions: Insights from Neuroeconomics Research in Animals",
+   v:"Biological Psychiatry", d:"72, 101–106",
+   u:"https://www.sciencedirect.com/science/article/pii/S0006322312001448"},
+  {g:"Journal articles", y:"2011", ch:["n"], st:"Reviewed",
+   a:"Pearson JM, Heilbronner SR, Barack DL, Hayden BY, Platt ML",
+   t:"Posterior Cingulate Cortex: Adapting Behavior to a Changing World",
+   v:"Trends in Cognitive Sciences", d:"15(4), 143–151",
+   u:"https://www.sciencedirect.com/science/article/pii/S1364661311000180"},
+  {g:"Journal articles", y:"2010", ch:["p"], st:"Invited", a:"Flanagan OJ, Barack DL",
+   t:"Neuroexistentialism", v:"EurAmerica", d:"40(3), 1–18"},
+
+  {g:"Books", y:"Forthcoming", ch:["p"], st:"Edited volume",
+   a:"Rowbottom DP, Curtis-Trudel A, Barack DL",
+   t:"The Role of Artificial Intelligence in Science: Methodological and Epistemological Studies",
+   v:"Routledge"},
+
+  {g:"Book chapters", y:"Forthcoming", ch:["p"], a:"Barack DL",
+   t:"Perils and Prospects of NeuroAI",
+   v:"In Rowbottom, Curtis-Trudel, and Barack (eds.), The Role of Artificial Intelligence in Science"},
+  {g:"Book chapters", y:"2017", ch:["n"], a:"Barack DL, Platt ML",
+   t:"Engaging and Exploring: Cortical Circuits for Adaptive Foraging Decisions",
+   v:"In Stevens JR (ed.), Impulsivity", d:"163–199",
+   u:"https://link.springer.com/chapter/10.1007/978-3-319-51721-6_6"},
+  {g:"Book chapters", y:"2014", ch:["n"],
+   a:"Harris JA, Barack DL, McMahon AR, Mitroff SR, Woldorff MG",
+   t:"Object-Category Processing, Perceptual Awareness, and the Role of Attention during Motion-Induced Blindness",
+   v:"In Mangun GR (ed.), Cognitive Electrophysiology of Attention: Signals of the Mind", d:"97–106"},
+
+  {g:"Manuscripts and preprints", y:"Preprint", ch:["p"], a:"Barack DL, Jaegle A",
+   t:"Extended Intelligence", v:"arXiv:2209.07449", u:"https://arxiv.org/abs/2209.07449"},
+
+  {g:"Book reviews", y:"2022", ch:["p"], a:"Barack DL",
+   t:"Review of The Tools of Neuroscience Experiment, by John Bickle, Carl F. Craver, and Ann-Sophie Barwich",
+   v:"British Journal for the Philosophy of Science"}
+];
+
+const ORDER = ["Journal articles","Books","Book chapters","Manuscripts and preprints","Book reviews"];
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+document.getElementById("talklist").innerHTML = TALKS.map(k =>
+  '<li><span class="when">' + esc(k.d) + '</span>' +
+  '<span class="what">' + esc(k.t) + '</span>' +
+  '<span class="where">' + esc(k.w) + '</span></li>').join("");
+
+function tagsFor(p){
+  let o = "";
+  if (p.ch.includes("p")) o += '<span class="tag tag--p">Phil</span>';
+  if (p.ch.includes("n")) o += '<span class="tag tag--n">Neuro</span>';
+  if (p.st) o += '<span class="tag tag--s">' + esc(p.st) + '</span>';
+  return '<span class="tags">' + o + '</span>';
+}
+
+document.getElementById("publist").innerHTML = ORDER.map(group => {
+  const items = PUBS.filter(p => p.g === group);
+  if (!items.length) return "";
+  const rows = items.map(p => {
+    const title = p.u ? '<a href="' + esc(p.u) + '">' + esc(p.t) + '</a>' : esc(p.t);
+    const venue = p.v ? '<span class="ven"><i>' + esc(p.v) + '</i>' + (p.d ? ", " + esc(p.d) : "") + '.</span>' : "";
+    return '<li class="pub" data-ch="' + p.ch.join(" ") + '">' +
+             '<span class="yr">' + esc(p.y) + '</span><span class="bd">' +
+             '<span class="ttl">' + title + '</span>' +
+             '<span class="aut">' + esc(p.a) + '.</span>' + venue + tagsFor(p) +
+           '</span></li>';
+  }).join("");
+  return '<div class="pubgroup"><h3>' + esc(group) + '</h3><ul class="pubs">' + rows + '</ul></div>';
+}).join("");
+
+document.querySelectorAll(".filters button").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const ch = btn.dataset.ch;
+    document.querySelectorAll(".filters button")
+      .forEach(b => b.setAttribute("aria-pressed", String(b === btn)));
+    document.querySelectorAll(".pub").forEach(el => {
+      el.hidden = !(ch === "all" || el.dataset.ch.split(" ").includes(ch));
+    });
+    document.querySelectorAll(".pubgroup").forEach(g => {
+      g.hidden = !g.querySelector(".pub:not([hidden])");
+    });
+  });
+});
+</script>
+</body>
+</html>
