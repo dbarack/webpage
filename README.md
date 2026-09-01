@@ -1,6 +1,6 @@
 # dbarack.com
 
-One file, no build step, no CMS to rot. Double-click `index.html` to preview locally.
+Double-click `index.html` to preview locally.
 
 ## Before publishing
 
